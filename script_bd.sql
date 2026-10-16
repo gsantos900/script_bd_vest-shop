@@ -77,3 +77,14 @@ CREATE TABLE notificacao_sistema(
 SELECT * FROM pedido;
 
 INSERT INTO pedido (id_usuario, tipo_notificacao,  titulo, mensagem, canal, status, data_envio) VALUES ('', '', '', '', '', '', '', '', '', '', '');
+
+CREATE TABLE cotacao_moeda( 
+id_cotacao_moeda SERIAL PRIMARY KEY
+  codigo_moeda varchar(3)
+  nome_moeda   varchar(50)
+  taxa_conversao_brl decimal(10,4)
+  data_ultima_atualizacao timestamp
+);
+SELECT * FROM cotacao_moeda;
+
+INSERT INTO cotacao_moeda(codigo_moeda,nome_moeda, taxa_conversao_br, data_ultima_atualizacao) VALUES ('', '', '', '', '');
